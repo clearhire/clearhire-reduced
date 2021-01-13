@@ -193,9 +193,16 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'font-family': 'Open Sans',
                     'fontSize': 16,
                 }, 
-                children=['Below are the four list of recommendations based on your selections, each with a different algorithm/explanation combination.',
-                            html.Br(), html.Br(), 'Options 1 & 2 both use the same algorithm but give different explanations. Hence there are a total of three different algorithms being used.',
-                            html.Br(), html.Br(), 'Options 3 & 4 both start by explaining how the algorithm produces its results. Note that the table given in Option 3 has no Explanations column.']
+                children=['Below are the four list of job recommendations based on your selections.',
+                            html.Br(), html.Br(), 'There are three different algorithms being used to recommend you jobs: A, B and C. Algorithm A is used by Option 1 and Option 2, algorithm B is used by Option 3, and Algorithm C is used by Option 4.', 
+                            html.Br(), html.Br(), 'Each Option has a different associated explanation:',
+                            html.Ul(children=[
+                                    html.Li('For each job, Option 1 provides a tailored explanation as to why you are being recommended that job.'),
+                                    html.Li('For each job, Option 2 also provides tailored explanations, except it instead describes the average qualifictions of users who have previously applied to that job.'),
+                                    html.Li('In the box above the recommendation list, Option 3 provides an explanation of how Algorithm B produces its results. It then goes on to describe the average qualifications of the users that Algorithm B considers you similar to.'),
+                                    html.Li('In the box above the recommendation list Option 4 provides an explanation of how Algorithm C produces its results. For each job it then also provides a tailored recommendation about why you are being recommended that job.')
+                            ]),
+                        ]
             ),
 
             html.Div(children=[
