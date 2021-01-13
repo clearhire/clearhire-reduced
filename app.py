@@ -180,7 +180,11 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'width': '30%'
                 }
             ),
-            html.Div(id='output-state')
+            dcc.Loading(
+                id='loading-state',
+                type='default',
+                children=html.Div(id='output-state')
+            ),
         ], 
         style={
             'display': 'none',
