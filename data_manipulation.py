@@ -120,7 +120,7 @@ def job_and_user_info(job_ids, user_ids):
     return job_info_filtered, user_info_filtered
 
 
-def random_jobs(k=20):
+def random_jobs(k=25):
     """takes the job_info dataframe and returns k random jobs"""
 
     job_info = pd.read_hdf('job-info.h5', 'df')
