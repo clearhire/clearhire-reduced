@@ -93,12 +93,12 @@ def mf_map_jobs(jobIDs, explanationIDs):
             explanation_titles = explanation_titles + [removed_id]
         
         if (len(explanation_titles) > 1):
-            explanation = '''You are recommended this job because you also liked: '%s' and '%s'
-                            which are similar''' %(explanation_titles[0], explanation_titles[1])
+            explanation = '''You are recommended this job because you selected: '%s' and '%s'
+                            ''' %(explanation_titles[0], explanation_titles[1])
 
         elif (len(explanation_titles) > 0):
-            explanation = '''You are recommended this job because you also liked: '%s'
-                            which is similar''' %(explanation_titles[0])
+            explanation = '''You are recommended this job because you selected: '%s'
+                            ''' %(explanation_titles[0])
         else:
             explanation = ''' '''
 
