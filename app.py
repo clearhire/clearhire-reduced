@@ -72,7 +72,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
         children=['You want to apply for a new job. ClearHire allows you to explore different algorithms and explanations for job recommendations to find the one that suits you best. To get started:', 
                     html.Br(), html.Br(), 'Step 1: Select at least four jobs from the list below that you would be interested in applying to. Hover your mouse over the text for more information about each one.',
                     html.Br(), 'Step 2: Click SUBMIT',
-                    html.Br(), 'Step 3: Scroll down to see four different lists of job recommendationss, based on the jobs you selected']
+                    html.Br(), 'Step 3: Scroll down to see four different lists of job recommendations, based on the jobs you selected']
     ),
     
     dash_table.DataTable(
