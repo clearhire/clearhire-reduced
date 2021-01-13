@@ -183,7 +183,6 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
             dcc.Loading(
                 id='loading-state',
                 type='default',
-                style={'size': 50 },
                 children=html.Div(id='output-state')
             ),
         ], 
