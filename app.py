@@ -284,6 +284,7 @@ def display_tables(value, n_clicks, selected_rows):
                             'fontSize': 16,
                             'border': '2px white solid',
                             'padding': '5px 0px 5px 10px',
+                            'backgroundColor': '#c9eaf7'
                         },
                         children=['Two jobs are considered similar if many users who applied to one also applied to the other. The system recommends you similar jobs to those you selected.']
                     ),
@@ -300,6 +301,7 @@ def display_tables(value, n_clicks, selected_rows):
                             'fontSize': 16,
                             'border': '2px white solid',
                             'padding': '5px 0px 5px 10px',
+                            'backgroundColor': '#c9eaf7'
                         },
                         children=intro_description
                     ),   
