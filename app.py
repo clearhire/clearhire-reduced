@@ -69,10 +69,10 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
             'fontSize': 16,
             'font-family': 'Open Sans',
         }, 
-        children=['Pretend you are searching for a job, so have come to ClearHire, a job listing platform which allows you to explore different job recommendation methods to find the one that suits you.', 
+        children=['You want to apply for a new job. ClearHire allows you to explore different algorithms and explanations for job recommendations to find the one that suits you best. To get started:', 
                     html.Br(), html.Br(), 'Step 1: Select at least four jobs from the list below that you would be interested in applying to. Hover your mouse over the text for more information about each one.',
                     html.Br(), 'Step 2: Click SUBMIT',
-                    html.Br(), 'Step 3: Scroll down to see to your results']
+                    html.Br(), 'Step 3: Scroll down to see four different lists of job recommendationss, based on the jobs you selected']
     ),
     
     dash_table.DataTable(
@@ -193,7 +193,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'font-family': 'Open Sans',
                     'fontSize': 16,
                 }, 
-                children=['Below are four list of recommendations based on different algorithm/explanation combinations.',
+                children=['Below are the four list of recommendations based on your selections, each with a different algorithm/explanation combination.',
                             html.Br(), 'Options 1 & 2 both use the same algorithm but give different explanations. Hence there are a total of three different algorithms being used.',
                             html.Br(), 'Options 3 & 4 both start by explaining how the algorithm produces its results. Note that the table given in Option 3 has no Explanations column.']
             ),
