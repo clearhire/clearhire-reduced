@@ -38,14 +38,14 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     height=200)
                 ], 
                 style={
-                    'margin': '0px 0px 0px 440px'
+                    'margin': '0px 0px 0px 445px'
                 }
             ),
             html.Div(
                 style={
                     'textAlign': 'center',
                     'color': '#FFFFFF',
-                    'fontSize': 80,
+                    'fontSize': 70,
                 }, 
                 children='''ClearHire'''
             ),
@@ -53,7 +53,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                 style={
                     'textAlign': 'center',
                     'color': '#FFFFFF',
-                    'fontSize': 40,
+                    'fontSize': 20,
                 },
                 children='A playground to experiment with different types of explanations and algorithms for job sourcing sites',
             ),
