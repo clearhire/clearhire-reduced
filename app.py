@@ -54,6 +54,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'textAlign': 'center',
                     'color': '#FFFFFF',
                     'fontSize': 20,
+                    'font-family': 'Open Sans',
                 },
                 children='A platform to experiment with different styles of explanations and algorithms for job sourcing sites',
             ),
@@ -64,7 +65,9 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
     html.Div(
         style={
             'margin': '50px 22px 0px 25px',
-            'color': '#FFFFFF'
+            'color': '#FFFFFF',
+            'fontSize': 16,
+            'font-family': 'Open Sans',
         }, 
         children='''
             Select (at least 4) jobs from the list that you would be interested in applying to, click SUBMIT, and then scroll down to see your results.
@@ -74,7 +77,9 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
     html.Div(
         style={
             'margin': '0px 22px 0px 25px',
-            'color': '#FFFFFF'
+            'color': '#FFFFFF',
+            'fontSize': 16,
+            'font-family': 'Open Sans',
         }, 
         children='''
             Hover over the text to see more information'''
@@ -98,8 +103,8 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
         },
         style_cell={
             'textAlign': 'left',
-            'font-family': 'Arial',
-            'fontSize': 11,
+            'font-family': 'Open Sans',
+            'fontSize': 13,
             'backgroundColor': '#d9ecf3',
             'padding': '5px', 
             'textOverflow': 'ellipsis',
@@ -123,7 +128,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
         style_header={
             'fontWeight': 'bold',
             'backgroundColor': '#a7dff3e8',
-            'fontSize': 14,
+            'fontSize': 16,
             'minHeight': '60px',
             'height': '60px'
         },
@@ -141,7 +146,8 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
             n_clicks=0, 
             children='Submit',
             style={
-                'backgroundColor': '#FFFFFF'
+                'backgroundColor': '#FFFFFF',
+                'font-family': 'Open Sans',
             }
         )],
         style={
@@ -157,7 +163,8 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                 style={
                     'textAlign': 'left',
                     'color': '#FFFFFF',
-                    'fontSize': 35,
+                    'fontSize': 40,
+                    'font-family': 'Open Sans',
                     'margin': '50px 0px 0px 25px'
                 }, 
                 children='''Your Results:'''
@@ -167,7 +174,9 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                 style={
                     'textAlign': 'left',
                     'color': '#FFFFFF',
-                    'margin': '50px 22px 0px 25px'
+                    'margin': '50px 22px 0px 25px',
+                    'font-family': 'Open Sans',
+                    'fontSize': 16,
                 }, 
                 children='''Below are four different algorithm and explanation combinations. Options 1 & 2 both use the same algorithm but give 
                 different explanations for the results. Hence there are a total of three different recommendation algorithms being used. Option 3 and Option 4 both start by 
@@ -249,7 +258,10 @@ def display_tables(value, n_clicks, selected_rows):
                         style={
                             'margin': '22px 30px 0px 30px',
                             'color': '#ffffff',
-                            'fontWeight': 'bold'
+                            'font-family': 'Open Sans',
+                            'fontSize': 16,
+                            'border': '2px white solid',
+                            'padding': '5px 0px 5px 10px',
                         },
                         children=['Two jobs are considered similar if many users who applied to one also applied to the other. The system recommends you similar jobs to those you selected.']
                     ),
@@ -262,7 +274,10 @@ def display_tables(value, n_clicks, selected_rows):
                         style={
                             'margin': '22px 30px 0px 30px',
                             'color': '#ffffff',
-                            'fontWeight': 'bold'
+                            'font-family': 'Open Sans',
+                            'fontSize': 16,
+                            'border': '2px white solid',
+                            'padding': '5px 0px 5px 10px',
                         },
                         children=intro_description
                     ),   
