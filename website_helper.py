@@ -26,24 +26,42 @@ def generate_table_without_explanations(df):
                     'font-family': 'Open Sans',
                     'fontSize': 13,
                     'backgroundColor': '#d9ecf3',
-                    'padding': '5px', 
-                    'textOverflow': 'ellipsis',
+                    'padding': '5px 5px 0px 20px', 
+                    'textOverflow': 'clip',
                     'overflow': 'hidden',
-                    'maxWidth': '175px', 
-                    'minWidth': '175px',
-                    'width': '175px',
+                    'maxWidth': '75px', 
+                    'minWidth': '75px',
+                    'width': '75px',
                     'minHeight': '45px', 
                     'height': '45px', 
                 },
-                style_cell_conditional=[{
-                    'if': {
-                        'column_id': 'Title',
+                style_cell_conditional=[
+                    {
+                        'if': {
+                            'column_id': 'Title',
+                        },
+                            'minWidth': '250px',
+                            'maxWidth': '250px',
+                            'width': '250px',
+                            'fontWeight': 'bold'
                     },
-                        'minWidth': '270px',
-                        'maxWidth': '270px',
-                        'width': '270px',
-                        'fontWeight': 'bold'
-                }],
+                    {
+                        'if': {
+                            'column_id': 'Requirements',
+                        },
+                            'minWidth': '250px',
+                            'maxWidth': '250px',
+                            'width': '250px',
+                    },
+                    {
+                        'if': {
+                            'column_id': 'Description',
+                        },
+                            'minWidth': '250px',
+                            'maxWidth': '250px',
+                            'width': '250px',
+                    },
+                ],
                 style_header={
                     'fontWeight': 'bold',
                     'backgroundColor': '#a7dff3e8',
@@ -56,7 +74,14 @@ def generate_table_without_explanations(df):
                     'border': '22px solid #3c73a8',
                     'borderRadius': '15px',
                     'width': '96%'
-                }
+                },
+                tooltip_data=[
+                    {
+                        column: {'value': str(value)}
+                        for column, value in row.items()
+                    } for row in recommendations.to_dict('rows')
+                ],
+                tooltip_duration=None,
             ))
 
 
@@ -84,16 +109,32 @@ def generate_table(df):
                         'maxWidth': '235px',
                         'width': '235px',
                         'whiteSpace': 'normal',
-                        'backgroundColor': '#c9eaf7',
+                        'backgroundColor': '#c9eaf7 ',
                     },
                     {
                         'if': {
                             'column_id': 'Title',
                         },
-                        'minWidth': '205px',
-                        'maxWidth': '205px',
-                        'width': '205px',
+                        'minWidth': '200px',
+                        'maxWidth': '200px',
+                        'width': '200px',
                         'fontWeight': 'bold',
+                    },
+                    {
+                        'if': {
+                            'column_id': 'Requirements',
+                        },
+                            'minWidth': '200px',
+                            'maxWidth': '200px',
+                            'width': '200px',
+                    },
+                    {
+                        'if': {
+                            'column_id': 'Description',
+                        },
+                            'minWidth': '200px',
+                            'maxWidth': '200px',
+                            'width': '200px',
                     },
                 ],
                 style_cell={
@@ -101,12 +142,12 @@ def generate_table(df):
                     'font-family': 'Open Sans',
                     'fontSize': 13,
                     'backgroundColor': '#d9ecf3',
-                    'padding': '5px', 
-                    'textOverflow': 'ellipsis',
+                    'padding': '5px 5px 0px 20px', 
+                    'textOverflow': 'clip',
                     'overflow': 'hidden',
-                    'maxWidth': '150px', 
-                    'minWidth': '150px',
-                    'width': '150px',
+                    'maxWidth': '75px', 
+                    'minWidth': '75px',
+                    'width': '75px',
                     'minHeight': '45px', 
                     'maxHeight': '45px', 
                     'height': '45px', 
@@ -123,6 +164,13 @@ def generate_table(df):
                     'border': '22px solid #3c73a8',
                     'borderRadius': '15px',
                     'width': '96%'
-                }
+                },
+                tooltip_data=[
+                    {
+                        column: {'value': str(value)}
+                        for column, value in row.items()
+                    } for row in recommendations.to_dict('rows')
+                ],
+                tooltip_duration=None,
             ))
 
