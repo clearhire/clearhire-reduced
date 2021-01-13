@@ -23,8 +23,8 @@ def generate_table_without_explanations(df):
                 },
                 style_cell={
                     'textAlign': 'left',
-                    'font-family': 'Arial',
-                    'fontSize': 11,
+                    'font-family': 'Open Sans',
+                    'fontSize': 13,
                     'backgroundColor': '#d9ecf3',
                     'padding': '5px', 
                     'textOverflow': 'ellipsis',
@@ -47,7 +47,7 @@ def generate_table_without_explanations(df):
                 style_header={
                     'fontWeight': 'bold',
                     'backgroundColor': '#a7dff3e8',
-                    'fontSize': 14,
+                    'fontSize': 16,
                     'minHeight': '60px',
                     'height': '60px'
                 },
@@ -98,8 +98,8 @@ def generate_table(df):
                 ],
                 style_cell={
                     'textAlign': 'left',
-                    'font-family': 'Arial',
-                    'fontSize': 11,
+                    'font-family': 'Open Sans',
+                    'fontSize': 13,
                     'backgroundColor': '#d9ecf3',
                     'padding': '5px', 
                     'textOverflow': 'ellipsis',
@@ -114,7 +114,7 @@ def generate_table(df):
                 style_header={
                     'fontWeight': 'bold',
                     'backgroundColor': '#a7dff3e8',
-                    'fontSize': 14,
+                    'fontSize': 16,
                     'minHeight': '60px',
                     'height': '60px'
                 },
@@ -125,5 +125,4 @@ def generate_table(df):
                     'width': '96%'
                 }
             ))
-
 
