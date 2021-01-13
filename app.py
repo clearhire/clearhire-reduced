@@ -38,7 +38,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     height=200)
                 ], 
                 style={
-                    'margin': '0px 0px 0px 445px'
+                    'margin': '0px 0px 0px 447px'
                 }
             ),
             html.Div(
@@ -55,7 +55,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'color': '#FFFFFF',
                     'fontSize': 20,
                 },
-                children='A playground to experiment with different types of explanations and algorithms for job sourcing sites',
+                children='A platform to experiment with different styles of explanations and algorithms for job sourcing sites',
             ),
         ], 
         style={'padding': 50}
