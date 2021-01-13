@@ -61,7 +61,7 @@ def item_cf_map_jobs(jobIDs, explanationIDs):
         explanation_description = job_info[job_info.JobID == explanation]
         description = explanation_description['Title'].to_string()
         removed_id = description.split(' ', 1)[1] 
-        explanation = '''You are recommended this job because you also liked: '%s' which is similar''' %(removed_id)
+        explanation = '''You are recommended this job because you selected: '%s''' %(removed_id)
         explanation_titles = explanation_titles + [explanation]
 
     recommendations = pd.DataFrame(job_data, columns=['JobID', "Title", "Description", "Requirements", "City", "State", "Country", "Zip"])
