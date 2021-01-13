@@ -70,6 +70,15 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
             Select (at least 4) jobs from the list that you would be interested in applying to, click SUBMIT, and then scroll down to see your results.
             The recommendation algorithms will use your selections to recommend jobs.'''
     ),
+
+    html.Div(
+        style={
+            'margin': '0px 22px 0px 25px',
+            'color': '#FFFFFF'
+        }, 
+        children='''
+            Hover over the text to see more information'''
+    ),
     
     dash_table.DataTable(
         id='sample-jobs',
@@ -85,31 +94,32 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
         row_selectable='multi',
         selected_rows=[],
         style_data={
-            'whiteSpace': 'normal',
+            'whiteSpace': 'nowrap',
         },
-        css=[{
-            'selector': '.dash-spreadsheet td div',
-            'rule': '''
-                line-height: 15px;
-                max-height: 90px; min-height: 90px; height: 90px;
-                display: block;
-                overflow-y: hidden;
-            '''
-        }],
-        tooltip_data=[
-            {
-                column: {'value': str(value)}
-                for column, value in row.items()
-            } for row in sample_jobs.to_dict('rows')
-        ],
-        tooltip_duration=None,
         style_cell={
             'textAlign': 'left',
             'font-family': 'Arial',
             'fontSize': 11,
             'backgroundColor': '#d9ecf3',
-            'padding': '5px'
+            'padding': '5px', 
+            'textOverflow': 'ellipsis',
+            'overflow': 'hidden',
+            'maxWidth': '175px', 
+            'minWidth': '175px',
+            'width': '175px',
+            'minHeight': '45px', 
+            'maxHeight': '45px', 
+            'height': '45px', 
         },
+        style_cell_conditional=[{
+            'if': {
+                'column_id': 'Title',
+            },
+                'minWidth': '270px',
+                'maxWidth': '270px',
+                'width': '270px',
+                'fontWeight': 'bold'
+        }],
         style_header={
             'fontWeight': 'bold',
             'backgroundColor': '#a7dff3e8',
