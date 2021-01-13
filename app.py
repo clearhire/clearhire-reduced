@@ -38,23 +38,24 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     height=200)
                 ], 
                 style={
-                    'margin': '0px 0px 0px 425px'
+                    'margin': '0px 0px 0px 440px'
                 }
             ),
             html.Div(
                 style={
                     'textAlign': 'center',
                     'color': '#FFFFFF',
-                    'fontSize': 50,
+                    'fontSize': 80,
                 }, 
                 children='''ClearHire'''
             ),
-            html.H6(
-                children='A playground to experiment with different types of explanations and algorithms for job sourcing sites',
+            html.Div(
                 style={
                     'textAlign': 'center',
-                    'color': '#FFFFFF'
-                }
+                    'color': '#FFFFFF',
+                    'fontSize': 40,
+                },
+                children='A playground to experiment with different types of explanations and algorithms for job sourcing sites',
             ),
         ], 
         style={'padding': 50}
