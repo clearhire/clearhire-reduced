@@ -198,9 +198,9 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                             html.Br(), html.Br(), 'Each Option has a different associated explanation:',
                             html.Ul(children=[
                                     html.Li('For each job, Option 1 provides a tailored explanation as to why you are being recommended that job.'),
-                                    html.Li('For each job, Option 2 also provides tailored explanations, except it instead describes the average qualifictions of users who have previously applied to that job.'),
+                                    html.Li('For each job, Option 2 also provides a tailored explanation, except it instead describes the average qualifictions of users who have previously applied to that job.'),
                                     html.Li('In the box above the recommendation list, Option 3 provides an explanation of how Algorithm B produces its results. It then goes on to describe the average qualifications of the users that Algorithm B considers you similar to.'),
-                                    html.Li('In the box above the recommendation list Option 4 provides an explanation of how Algorithm C produces its results. For each job it then also provides a tailored recommendation about why you are being recommended that job.')
+                                    html.Li('In the box above the recommendation list, Option 4 provides an explanation of how Algorithm C produces its results. For each job it then also provides a tailored explanation about why you are being recommended that job.')
                             ]),
                         ]
             ),
