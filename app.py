@@ -56,7 +56,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'fontSize': 20,
                     'font-family': 'Open Sans',
                 },
-                children='A platform to experiment with different styles of explanations and algorithms for job sourcing sites',
+                children='A platform to experiment with different styles of explanations and algorithms for job listing sites',
             ),
         ], 
         style={'padding': 50}
@@ -69,20 +69,10 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
             'fontSize': 16,
             'font-family': 'Open Sans',
         }, 
-        children='''
-            Select (at least 4) jobs from the list that you would be interested in applying to, click SUBMIT, and then scroll down to see your results.
-            The recommendation algorithms will use your selections to recommend jobs.'''
-    ),
-
-    html.Div(
-        style={
-            'margin': '0px 22px 0px 25px',
-            'color': '#FFFFFF',
-            'fontSize': 16,
-            'font-family': 'Open Sans',
-        }, 
-        children='''
-            Hover over the text to see more information'''
+        children=['Pretend you are searching for a job, so have come to ClearHire, a job listing platform which allows you to explore different job recommendation methods to find the one that suits you.', 
+                    html.Br(), html.Br(), 'Step 1: Select at least four jobs from the list below that you would be interested in applying to. Hover your mouse over the text for more information about each one.',
+                    html.Br(), 'Step 2: Click SUBMIT',
+                    html.Br(), 'Step 3: Scroll down to see to your results']
     ),
     
     dash_table.DataTable(
@@ -106,25 +96,43 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
             'font-family': 'Open Sans',
             'fontSize': 13,
             'backgroundColor': '#d9ecf3',
-            'padding': '5px', 
-            'textOverflow': 'ellipsis',
+            'padding': '5px 5px 0px 20px', 
+            'textOverflow': 'clip',
             'overflow': 'hidden',
-            'maxWidth': '175px', 
-            'minWidth': '175px',
-            'width': '175px',
+            'maxWidth': '75px', 
+            'minWidth': '75px',
+            'width': '75px',
             'minHeight': '45px', 
             'maxHeight': '45px', 
             'height': '45px', 
         },
-        style_cell_conditional=[{
-            'if': {
-                'column_id': 'Title',
+        style_cell_conditional=[
+            {
+                'if': {
+                    'column_id': 'Title',
+                },
+                    'minWidth': '250px',
+                    'maxWidth': '250px',
+                    'width': '250px',
+                    'fontWeight': 'bold'
             },
-                'minWidth': '270px',
-                'maxWidth': '270px',
-                'width': '270px',
-                'fontWeight': 'bold'
-        }],
+            {
+                'if': {
+                    'column_id': 'Requirements',
+                },
+                    'minWidth': '250px',
+                    'maxWidth': '250px',
+                    'width': '250px',
+            },
+            {
+                'if': {
+                    'column_id': 'Description',
+                },
+                    'minWidth': '250px',
+                    'maxWidth': '250px',
+                    'width': '250px',
+            },
+        ],
         style_header={
             'fontWeight': 'bold',
             'backgroundColor': '#a7dff3e8',
@@ -137,7 +145,14 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
             'border': '22px solid #3c73a8',
             'borderRadius': '15px',
             'width': '96%'
-        }
+        },
+        tooltip_data=[
+            {
+                column: {'value': str(value)}
+                for column, value in row.items()
+            } for row in sample_jobs.to_dict('rows')
+        ],
+        tooltip_duration=None,
     ),
 
     html.Div(children=[
@@ -178,9 +193,9 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'font-family': 'Open Sans',
                     'fontSize': 16,
                 }, 
-                children='''Below are four different algorithm and explanation combinations. Options 1 & 2 both use the same algorithm but give 
-                different explanations for the results. Hence there are a total of three different recommendation algorithms being used. Option 3 and Option 4 both start by 
-                explaining how the algorithm produces its results. Note that the table given in Option 3 has no 'Explanations' column. '''
+                children=['Below are four list of recommendations based on different algorithm/explanation combinations.',
+                            html.Br(), 'Options 1 & 2 both use the same algorithm but give different explanations. Hence there are a total of three different algorithms being used.',
+                            html.Br(), 'Options 3 & 4 both start by explaining how the algorithm produces its results. Note that the table given in Option 3 has no Explanations column.']
             ),
 
             html.Div(children=[
