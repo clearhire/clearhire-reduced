@@ -194,8 +194,8 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'fontSize': 16,
                 }, 
                 children=['Below are the four list of recommendations based on your selections, each with a different algorithm/explanation combination.',
-                            html.Br(), 'Options 1 & 2 both use the same algorithm but give different explanations. Hence there are a total of three different algorithms being used.',
-                            html.Br(), 'Options 3 & 4 both start by explaining how the algorithm produces its results. Note that the table given in Option 3 has no Explanations column.']
+                            html.Br(), html.Br(), 'Options 1 & 2 both use the same algorithm but give different explanations. Hence there are a total of three different algorithms being used.',
+                            html.Br(), html.Br(), 'Options 3 & 4 both start by explaining how the algorithm produces its results. Note that the table given in Option 3 has no Explanations column.']
             ),
 
             html.Div(children=[
