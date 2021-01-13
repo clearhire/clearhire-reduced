@@ -194,7 +194,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     'fontSize': 16,
                 }, 
                 children=['Below are the four list of job recommendations based on your selections.',
-                            html.Br(), html.Br(), 'There are three different algorithms being used to recommend you jobs: A, B and C. Algorithm A is used by Option 1 and Option 2, algorithm B is used by Option 3, and Algorithm C is used by Option 4.', 
+                            html.Br(), html.Br(), 'There are three different algorithms being used to recommend you jobs: A, B and C. Algorithm A is used by Option 1 and Option 2, Algorithm B is used by Option 3, and Algorithm C is used by Option 4.', 
                             html.Br(), html.Br(), 'Each Option has a different associated explanation:',
                             html.Ul(children=[
                                     html.Li('For each job, Option 1 provides a tailored explanation as to why you are being recommended that job.'),
