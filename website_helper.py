@@ -84,7 +84,7 @@ def generate_table(df):
                         'maxWidth': '235px',
                         'width': '235px',
                         'whiteSpace': 'normal',
-                        'backgroundColor': '#a7dff3e8',
+                        'backgroundColor': '#b5e2f3e8',
                     },
                     {
                         'if': {
