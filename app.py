@@ -38,7 +38,7 @@ app.layout = html.Div(style={'backgroundColor': '#3c73a8'}, children=[
                     height=200)
                 ], 
                 style={
-                    'margin': '0px 0px 0px 465px'
+                    'margin': '0px 0px 0px 445px'
                 }
             ),
             html.Div(
